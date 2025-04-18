@@ -2,13 +2,13 @@
 class Actividad:
     """Clase que representa una actividad."""
 
-    def __init__(self, alumno_id, nombre, actividad, duracion_min, calorias, fecha):
-        self.alumno_id = alumno_id
-        self.nombre = nombre
-        self.actividad = actividad
-        self.duracion_min = duracion_min
-        self.calorias = calorias
-        self.fecha = fecha
+    def __init__(self, actividad_dict):
+        self.alumno_id = actividad_dict["alumno_id"]
+        self.nombre = actividad_dict["nombre"]
+        self.actividad = actividad_dict["actividad"]
+        self.duracion_min = actividad_dict["duracion"]
+        self.calorias = actividad_dict["calorias"]
+        self.fecha = actividad_dict["fecha"]
         
     def mostrar_informacion(self):
         """Muestra la información de la actividad."""
@@ -21,7 +21,14 @@ class Actividad:
 
 
     def __str__(self):
-        return f"Actividad: {self.nombre}, Fecha: {self.fecha}, Tipo: {self.tipo}, Descripción: {self.descripcion}"
+        return (
+            f"-----------------------------------\n"
+            f" Actividad: {self.actividad}\n"
+            f" Duración: {self.duracion_min} min\n"
+            f" Calorías: {self.calorias}\n"
+            f" Fecha: {self.fecha}\n"
+            f"------------------------------------"
+        )
 
     def __repr__(self):
         return f"Actividad({self.nombre}, {self.fecha}, {self.tipo}, {self.descripcion})"
