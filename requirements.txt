@@ -1,0 +1,4 @@
+
+# Librerias para manejo de pdfs
+Jinja2==3.1.6
+xhtml2pdf==0.2.17

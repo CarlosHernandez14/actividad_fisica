@@ -20,4 +20,11 @@ class Estudiante:
         print(f"Carrera: {self.carrera}")
         
     def __str__(self):
-        return f"Estudiante: {self.nombre}, ID: {self.id}, Carrera: {self.carrera}"
+        return (
+            f"-----------------------------------\n"
+            f" ID: {self.id}\n"
+            f" Nombre: {self.nombre}\n"
+            f" Edad: {self.edad}\n"
+            f" Carrera: {self.carrera}\n"
+            f"------------------------------------"
+        )

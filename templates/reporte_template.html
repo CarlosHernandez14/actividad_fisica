@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reporte de Actividad Física</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <h1>Reporte de Actividad Física</h1>
+
+  <section>
+    <h2>Total de Calorías por Estudiante</h2>
+    <ul>
+      {% for estudiante, total in calorias_por_estudiante.items() %}
+        <li><strong>{{ estudiante }}</strong>: {{ total }} cal</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Promedio de Calorías por Actividad</h2>
+    <ul>
+      {% for actividad, promedio in promedio_por_actividad.items() %}
+        <li><strong>{{ actividad }}</strong>: {{ promedio }} cal</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Días con Más Actividades</h2>
+    <ul>
+      {% for dia, cantidad in dias_con_mas_actividades.items() %}
+        <li><strong>{{ dia }}</strong>: {{ cantidad }} actividades</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Actividades Ordenadas por Fecha</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th><th>Estudiante</th><th>Actividad</th><th>Duración</th><th>Calorías</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for act in actividades_ordenadas %}
+          <tr>
+            <td>{{ act.fecha }}</td>
+            <td>{{ act.nombre }}</td>
+            <td>{{ act.actividad }}</td>
+            <td>{{ act.duracion_min }} min</td>
+            <td>{{ act.calorias }} cal</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>

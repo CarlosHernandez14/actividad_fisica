@@ -23,7 +23,8 @@ class Actividad:
     def __str__(self):
         return (
             f"-----------------------------------\n"
-            f" Actividad: {self.actividad}\n"
+            f" Tipo de Actividad: {self.actividad}\n"
+            f" Nombre de la actividad: {self.nombre}\n"
             f" Duración: {self.duracion_min} min\n"
             f" Calorías: {self.calorias}\n"
             f" Fecha: {self.fecha}\n"
