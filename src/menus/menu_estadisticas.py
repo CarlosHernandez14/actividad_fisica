@@ -30,7 +30,8 @@ def menu_estadisticas():
     
     # Validar la opción ingresada
     # Asegurarse de que la opción sea un número entre 1 y 6
-    while opcion not in ["1", "2", "3", "4", "5", "6"]:
+    while opcion not in ["1", "2", "3", "4", "5", "6", "7"]:
+        # si la opción no es válida, mostrar un mensaje de error y volver a pedir la opción
         print("Opción inválida. Por favor, seleccione una opción válida.")
         opcion = input("Seleccione una opción: ")
         

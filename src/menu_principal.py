@@ -6,7 +6,7 @@ from src.menus.menu_estadisticas import menu_estadisticas
 
 
 def menu_principal():
-    """Muestra el menú principal del juego."""
+    """Muestra el menú principal de la app."""
     
     opciones = """
     1. Registrar Actividad
@@ -26,7 +26,7 @@ def menu_principal():
     print("=" * 35)
     opcion = input("Seleccione una opción: ")
     
-    while opcion not in ["1", "2", "3", "4", "5", "6", "7"]:
+    while opcion not in ["1", "2", "3", "4", "5", "6", "7", "8"]:
         print("Opción inválida. Por favor, seleccione una opción válida.")
         opcion = input("Seleccione una opción: ")
         
