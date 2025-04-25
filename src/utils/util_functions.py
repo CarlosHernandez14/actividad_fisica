@@ -19,11 +19,17 @@ def getCaloriasPorEstudiante():
     """
     caloriasPorEstudiante = {}
     
+    # Retorna los ids los estudiantes y las calorías de cada actividad
+    # "ALDFDF": 450,
+    # "BDFDFD": 320,
     for actividad in actividades:
         if actividad.alumno_id not in caloriasPorEstudiante:
             caloriasPorEstudiante[actividad.alumno_id] = 0
         caloriasPorEstudiante[actividad.alumno_id] += int(actividad.calorias)
         
+    # Reemplaza los IDs de los estudiantes por sus nombres
+    # "Alice": 450,
+    # "Bob": 320,
     for estudiante in estudiantes:
         if estudiante.id in caloriasPorEstudiante:
             # Reemplaza el ID del estudiante por su nombre
@@ -72,6 +78,9 @@ def diasConMasActividades():
     actividadesCargadas = actividadesPickle.cargar_actividades()
     
     # Diccionario para agrupar actividades por fecha
+    # "2023-10-01": [actividad1, actividad2],
+    # "2023-10-02": [actividad3, actividad4, actividad5],
+    # "2023-10-03": [actividad6],
     diasConMasActividades = {}
     
     for actividad in actividadesCargadas:
@@ -84,6 +93,9 @@ def diasConMasActividades():
     # Diccionario con la cantidad de actividades por día
     diasConMasActividadesCount = {}
     
+    # "2023-10-01": 2,
+    # "2023-10-02": 3,
+    # "2023-10-03": 1,
     for fecha, listaActividades in diasConMasActividades.items():
         cantidad = len(listaActividades)
         diasConMasActividadesCount[fecha] = cantidad

@@ -64,6 +64,7 @@ def menu_registrar_actividad():
     print("Registrar Actividad")
     print("=" * 35)
     
+    # Guarda el id del estudiante
     alumno_id = input("Ingrese el ID del estudiante: ")
     
     # Verificar si el estudiante existe

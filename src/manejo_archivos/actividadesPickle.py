@@ -6,8 +6,8 @@ class ActividadesPickle:
 
     def guardar_actividades(self, actividades):
         try:
-            with open(self.nombre_archivo, 'wb') as archivo:
-                pickle.dump(actividades, archivo)
+            with open(self.nombre_archivo, 'wb') as archivo: # Write Binary ('wb')
+                pickle.dump(actividades, archivo) # Guardar actividades
                 
             print("Actividades guardadas correctamente.")
         except Exception as e:
@@ -15,7 +15,7 @@ class ActividadesPickle:
 
     def cargar_actividades(self):
         try:
-            with open(self.nombre_archivo, 'rb') as archivo:
+            with open(self.nombre_archivo, 'rb') as archivo: # Read Binary ('rb')
                 return pickle.load(archivo)
         except FileNotFoundError:
             return []
